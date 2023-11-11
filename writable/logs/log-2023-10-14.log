@@ -1,0 +1,288 @@
+CRITICAL - 2023-10-14 10:07:28 --> The framework needs the following extension(s) installed and loaded: intl.
+in SYSTEMPATH\CodeIgniter.php on line 246.
+ 1 SYSTEMPATH\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+ 2 SYSTEMPATH\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+ 3 ROOTPATH\spark(88): CodeIgniter\CodeIgniter->initialize()
+CRITICAL - 2023-10-14 10:07:29 --> Uncaught Error: Class "Locale" not found in C:\xampp\htdocs\system\I18n\TimeTrait.php:74
+Stack trace:
+#0 C:\xampp\htdocs\system\I18n\TimeTrait.php(115): CodeIgniter\I18n\Time->__construct(NULL, NULL, NULL)
+#1 C:\xampp\htdocs\system\HTTP\ResponseTrait.php(468): CodeIgniter\I18n\Time::now()
+#2 C:\xampp\htdocs\system\HTTP\ResponseTrait.php(446): CodeIgniter\HTTP\Response->sendHeaders()
+#3 C:\xampp\htdocs\system\Debug\ExceptionHandler.php(78): CodeIgniter\HTTP\Response->send()
+#4 C:\xampp\htdocs\system\Debug\Exceptions.php(146): CodeIgniter\Debug\ExceptionHandler->handle(Object(CodeIgniter\Exceptions\FrameworkException), Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), 500, 1)
+#5 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Exceptions\FrameworkException))
+#6 {main}
+  thrown
+【Previous Exception】
+CodeIgniter\Exceptions\FrameworkException
+The framework needs the following extension(s) installed and loaded: intl.
+#0 C:\xampp\htdocs\system\CodeIgniter.php(246): CodeIgniter\Exceptions\FrameworkException::forMissingExtension('intl')
+#1 C:\xampp\htdocs\system\CodeIgniter.php(210): CodeIgniter\CodeIgniter->resolvePlatformExtensions()
+#2 C:\xampp\htdocs\spark(88): CodeIgniter\CodeIgniter->initialize()
+#3 {main}
+in SYSTEMPATH\I18n\TimeTrait.php on line 74.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-10-14 10:03:53 --> Undefined variable $content1
+in APPPATH\Views\layout.php on line 15.
+ 1 APPPATH\Views\layout.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $content1', 'C:\\xampp\\htdocs\\app\\Views\\layout.php', 15)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\layout.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('layout', [], true)
+ 5 APPPATH\Helpers\render_helper.php(7): view('layout', [...], [])
+ 6 APPPATH\Controllers\Board.php(9): render('board_list')
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->list()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:10:49 --> Invalid file: "board_write.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('board_write.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_write', [], true)
+ 3 APPPATH\Helpers\render_helper.php(10): view('board_write', [], [])
+ 4 APPPATH\Controllers\Board.php(13): render('board_write')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->write()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:12:02 --> Invalid file: "board_write.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('board_write.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_write', [], true)
+ 3 APPPATH\Helpers\render_helper.php(10): view('board_write', [], [])
+ 4 APPPATH\Controllers\Board.php(13): render('board_write')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->write()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:12:11 --> Invalid file: "board_write.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('board_write.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_write', [], true)
+ 3 APPPATH\Helpers\render_helper.php(10): view('board_write', [], [])
+ 4 APPPATH\Controllers\Board.php(13): render('board_write')
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->write()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-14 10:41:43 --> mysqli_sql_exception: Unknown column 'bid' in 'order clause' in C:\xampp\htdocs\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\app\Controllers\Board.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\system\CodeIgniter.php(919): App\Controllers\Board->list()
+#8 C:\xampp\htdocs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#9 C:\xampp\htdocs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-10-14 10:41:43 --> Unknown column 'bid' in 'order clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `board`
+ORDER BY `bid` DESC', [], false)
+ 2 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Controllers\Board.php(19): CodeIgniter\BaseModel->findAll()
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->list()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:53:47 --> Undefined variable $view
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(32): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:58:01 --> App\Controllers\Board::view(): Return value must be of type int, string returned
+in APPPATH\Controllers\Board.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:58:12 --> App\Controllers\Board::view(): Return value must be of type int, string returned
+in APPPATH\Controllers\Board.php on line 32.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:58:46 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(32): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 10:59:11 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(32): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:00:53 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(32): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:01:48 --> Call to undefined method App\Models\BoardModel::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:01:50 --> Call to undefined method App\Models\BoardModel::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:06:16 --> Call to undefined method App\Models\BoardModel::getResult
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getResult', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:12:42 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(33): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:14:48 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(33): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:14:51 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(33): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:15:47 --> Call to undefined method App\Models\BoardModel::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:15:47 --> Call to undefined method App\Models\BoardModel::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:17:49 --> Call to undefined method App\Models\BoardModel::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:42:07 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(36): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:43:27 --> Attempt to read property "title" on array
+in APPPATH\Views\board_view.php on line 5.
+ 1 APPPATH\Views\board_view.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "title" on array', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 5)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(36): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:45:42 --> Call to undefined method App\Models\BoardModel::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getRow', [])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-14 11:46:26 --> Call to undefined method App\Models\BoardModel::getRow
+in SYSTEMPATH\Model.php on line 873.
+ 1 APPPATH\Controllers\Board.php(31): CodeIgniter\Model->__call('getRow', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-10-14 12:00:31 --> mysqli_sql_exception: Unknown column 'id2' in 'where clause' in C:\xampp\htdocs\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\system\Database\MySQLi\Connection.php(306): mysqli->query('select * from b...', 0)
+#1 C:\xampp\htdocs\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('select * from b...')
+#2 C:\xampp\htdocs\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('select * from b...')
+#3 C:\xampp\htdocs\app\Models\BoardModel.php(22): CodeIgniter\Database\BaseConnection->query('select * from b...')
+#4 C:\xampp\htdocs\app\Controllers\Board.php(31): App\Models\BoardModel->getList('2')
+#5 C:\xampp\htdocs\system\CodeIgniter.php(919): App\Controllers\Board->view('2')
+#6 C:\xampp\htdocs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#7 C:\xampp\htdocs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-10-14 12:00:31 --> Unknown column 'id2' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Models\BoardModel.php(22): CodeIgniter\Database\BaseConnection->query('select * from board where id2')
+ 2 APPPATH\Controllers\Board.php(31): App\Models\BoardModel->getList('2')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('2')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

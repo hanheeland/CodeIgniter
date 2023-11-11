@@ -1,0 +1,174 @@
+CRITICAL - 2023-11-11 09:04:33 --> Undefined property: stdClass::$bid
+in APPPATH\Views\board_view.php on line 10.
+ 1 APPPATH\Views\board_view.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$bid', 'C:\\xampp\\htdocs\\app\\Views\\board_view.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_view.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_view', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_view', [...], [])
+ 6 APPPATH\Controllers\Board.php(76): render('board_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->view('13')
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-11-11 09:28:40 --> render(): Argument #2 ($data) must be of type array, stdClass given, called in C:\xampp\htdocs\app\Controllers\Board.php on line 79
+in APPPATH\Helpers\render_helper.php on line 5.
+ 1 APPPATH\Controllers\Board.php(79): render('board_write', Object(stdClass))
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->modify('13')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-11 09:36:41 --> SELECT * 
+                  FROM board 
+                 WHERE id = 13
+               
+INFO - 2023-11-11 09:37:52 --> SELECT * 
+                  FROM board 
+                 WHERE id = 13
+                 LIMIT 1
+               
+CRITICAL - 2023-11-11 09:38:08 --> Undefined variable $view
+in APPPATH\Views\board_write.php on line 4.
+ 1 APPPATH\Views\board_write.php(4): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $view', 'C:\\xampp\\htdocs\\app\\Views\\board_write.php', 4)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\app\\Views\\board_write.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('board_write', [], true)
+ 5 APPPATH\Helpers\render_helper.php(10): view('board_write', [], [])
+ 6 APPPATH\Controllers\Board.php(46): render('board_write')
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->write()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-11 09:38:51 --> SELECT * 
+                  FROM board 
+                 WHERE id = 13
+                 LIMIT 1
+               
+INFO - 2023-11-11 09:40:07 --> SELECT * 
+                  FROM board 
+                 WHERE id = 13
+                 LIMIT 1
+               
+INFO - 2023-11-11 09:45:53 --> INSERT INTO 
+                  board SET
+                       user = 'hanhee',
+                      title = 33,
+                    content = 33,
+                       date = NOW()
+               
+INFO - 2023-11-11 09:46:07 --> INSERT INTO 
+                  board SET
+                       user = 'hanhee',
+                      title = 3322,
+                    content = 3322,
+                       date = NOW()
+               
+ERROR - 2023-11-11 09:47:20 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6 in C:\xampp\htdocs\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\system\Database\MySQLi\Connection.php(306): mysqli->query('  UPDATE\r\n     ...', 0)
+#1 C:\xampp\htdocs\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('  UPDATE\r\n     ...')
+#2 C:\xampp\htdocs\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('  UPDATE\r\n     ...')
+#3 C:\xampp\htdocs\app\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query('  UPDATE\r\n     ...')
+#4 C:\xampp\htdocs\system\CodeIgniter.php(919): App\Controllers\Board->update()
+#5 C:\xampp\htdocs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#6 C:\xampp\htdocs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-11 09:47:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query('  UPDATE
+               board SET
+                   title = 3322,
+                 content = 3322,
+                    date = NOW()
+                WHERE id = 
+               ')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->update()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-11 09:47:39 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6 in C:\xampp\htdocs\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\system\Database\MySQLi\Connection.php(306): mysqli->query('  UPDATE\r\n     ...', 0)
+#1 C:\xampp\htdocs\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('  UPDATE\r\n     ...')
+#2 C:\xampp\htdocs\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('  UPDATE\r\n     ...')
+#3 C:\xampp\htdocs\app\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query('  UPDATE\r\n     ...')
+#4 C:\xampp\htdocs\system\CodeIgniter.php(919): App\Controllers\Board->update()
+#5 C:\xampp\htdocs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#6 C:\xampp\htdocs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-11 09:47:39 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query('  UPDATE
+               board SET
+                   title = 3322,
+                 content = 3322,
+                    date = NOW()
+                WHERE id = 
+               ')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->update()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-11 09:49:11 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6 in C:\xampp\htdocs\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\system\Database\MySQLi\Connection.php(306): mysqli->query(' UPDATE\r\n      ...', 0)
+#1 C:\xampp\htdocs\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute(' UPDATE\r\n      ...')
+#2 C:\xampp\htdocs\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery(' UPDATE\r\n      ...')
+#3 C:\xampp\htdocs\app\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query(' UPDATE\r\n      ...')
+#4 C:\xampp\htdocs\system\CodeIgniter.php(919): App\Controllers\Board->update()
+#5 C:\xampp\htdocs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#6 C:\xampp\htdocs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-11 09:49:11 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query(' UPDATE
+               board SET
+                   title = 332211,
+                 content = 332211,
+                    date = NOW()
+                WHERE id = 
+               ')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->update()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-11-11 10:12:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6 in C:\xampp\htdocs\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\system\Database\MySQLi\Connection.php(306): mysqli->query(' UPDATE\r\n      ...', 0)
+#1 C:\xampp\htdocs\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute(' UPDATE\r\n      ...')
+#2 C:\xampp\htdocs\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery(' UPDATE\r\n      ...')
+#3 C:\xampp\htdocs\app\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query(' UPDATE\r\n      ...')
+#4 C:\xampp\htdocs\system\CodeIgniter.php(919): App\Controllers\Board->update()
+#5 C:\xampp\htdocs\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+#6 C:\xampp\htdocs\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-11-11 10:12:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 6
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Controllers\Board.php(94): CodeIgniter\Database\BaseConnection->query(' UPDATE
+               board SET
+                   title = 332211,
+                 content = 332211,
+                    date = NOW()
+                WHERE id = 
+               ')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Board->update()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Board))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+INFO - 2023-11-11 10:13:37 -->  UPDATE
+               board SET
+                   title = 332211,
+                 content = 332211,
+                    date = NOW()
+                WHERE id = 15
+               
+INFO - 2023-11-11 10:14:33 -->  UPDATE
+               board SET
+                   title = 33221122,
+                 content = 33221122,
+                    date = NOW()
+                WHERE id = 15
+               
