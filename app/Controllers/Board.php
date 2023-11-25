@@ -34,7 +34,7 @@ class Board extends BaseController
 
     public function make_query($datas = array())
     {
-        if (!is_array($datas)) {
+        if (!is_array($datas) || empty($datas)) {
             return false;
         }
         $result = array();

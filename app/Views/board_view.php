@@ -1,3 +1,10 @@
+<?php
+if (empty($view)) {
+    echo "<script>alert('존재하지 않는 게시판 번호입니다.'); location.href='/board'; </script>";
+    exit;
+}
+?>
+
 <h3 class="pb-4 mb-4 fst-italic border-bottom" style="text-align:center;">
     - 게시판 보기 -
 </h3>

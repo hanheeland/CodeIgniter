@@ -2,7 +2,6 @@
 $action = "/writeSave";
 if (isset($view->title)) {
     $action = "/updateSave";
-    //$id = $view->id;
 }
 ?>
 <form method="post" action="<?=$action?>" enctype="multipart/form-data">
