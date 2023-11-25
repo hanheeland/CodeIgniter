@@ -2,11 +2,11 @@
 $action = "/writeSave";
 if (isset($view->title)) {
     $action = "/updateSave";
-    $id = $view->id;
+    //$id = $view->id;
 }
 ?>
 <form method="post" action="<?=$action?>" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="<?=$id?>">
+    <input type="hidden" name="id" value="<?=isset($view->id) ? $view->id : ""?>">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">제목</label>
         <input type="text" name="title" class="form-control" id="exampleFormControlInput1" placeholder="제목을 입력하세요." value="<?=isset($view->title) ? $view->title : '';?>">

@@ -14,33 +14,51 @@ class Board extends BaseController
         $this->boardModel = new BoardModel();
     }
 
-    public function board_data($id = null)
-    {    
+    public function board_data($id)
+    {
+        if (empty($id)) {
+            return false;
+        }
         $sql = "SELECT * 
                   FROM board 
                  WHERE id = $id
                  LIMIT 1
                ";
         $res = $this->db->query($sql);
-        $data['view'] = $res->getRow();
-        return $data;
+        if ($res !== false) {
+            $data['view'] = $res->getRow();
+            return $data;
+        }
+        return false;
     }
 
+    public function make_query($datas = array())
+    {
+        if (!is_array($datas)) {
+            return false;
+        }
+        $result = array();
+        foreach ($datas AS $k => $v) {
+            if ($k == 'id') { continue; }
+            $result[] .= "{$k} = '{$v}'";
+        }
+        $result[] .= "DATE = NOW()";
+        return implode(",",$result);
+    }
 
-    public function list(): string
+    public function list()
     {
         /*
         // 쿼리빌더 예시
         $data['lists'] = $this->boardModel->orderBy('id', 'DESC')->findAll();
-        */        
-        $this->db = db_connect();
+        */
         $sql = "SELECT * FROM board ORDER BY id DESC";
         $res = $this->db->query($sql);
         $data['lists'] = $res->getResult();
         return render('board_list', $data);
     }
 
-    public function write(): string
+    public function write()
     {
         return render('board_write');
     }
@@ -57,14 +75,11 @@ class Board extends BaseController
         ];
         $this->boardModel->save($data);
         */
-        $title = $this->request->getVar('title');
-        $content = $this->request->getVar('content');
+        $make_query = $this->make_query($_POST);
         $sql = "INSERT INTO 
                   board SET
                        user = 'hanhee',
-                      title = $title,
-                    content = $content,
-                       date = NOW()
+                       {$make_query}
                ";
         $res = $this->db->query($sql);
         if ($res !== false) {
@@ -74,8 +89,11 @@ class Board extends BaseController
     }
 
 
-    public function modify($id = null)
+    public function modify($id)
     {
+        if (empty($id)) {
+            return false;
+        }
         $data = $this->board_data($id);
         return render('board_write', $data);
     }
@@ -83,14 +101,11 @@ class Board extends BaseController
     public function update()
     {
         $id = $this->request->getVar('id');
-        $title = $this->request->getVar('title');
-        $content = $this->request->getVar('content');
-        $sql = " UPDATE
-               board SET
-                   title = $title,
-                 content = $content,
-                    date = NOW()
-                WHERE id = $id
+        $make_query = $this->make_query($_POST);
+        $sql = "UPDATE
+             board SET
+                 {$make_query}
+                 WHERE id = $id
                ";
         $res = $this->db->query($sql);
         if ($res !== false) {
@@ -99,14 +114,20 @@ class Board extends BaseController
         return $this->response->redirect('/boardView/'.$id);
     }
 
-    public function delete($id = null)
+    public function delete($id)
     {
+        if (empty($id)) {
+            return false;
+        }
         $sql = "DELETE FROM board where id = $id";
         $res = $this->db->query($sql);
+        if ($res !== false) {
+            log_message("info", $sql);
+        }
         return $this->response->redirect('/board');
     }
 
-    public function view($id = null): string
+    public function view($id)
     {
         /*
         // 쿼리빌더 예시
@@ -114,6 +135,9 @@ class Board extends BaseController
         $board_result = $boardModel->where('id', $id)->findAll();
         $data['views'] = $board_result;
         */
+        if (empty($id)) {
+            return false;
+        }
         $data = $this->board_data($id);
         return render('board_view', $data);
     }
